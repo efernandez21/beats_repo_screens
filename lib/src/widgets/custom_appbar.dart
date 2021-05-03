@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-
 // AppBar customizado
 class CustomAppBar extends StatelessWidget {
-  @override 
+  @override
   Widget build(BuildContext context) {
     return SafeArea(
       top: true,
@@ -15,42 +14,47 @@ class CustomAppBar extends StatelessWidget {
         color: Colors.transparent,
         child: Row(
           children: [
-            // Iconos pertenecientes al appBar 
+            // Iconos pertenecientes al appBar
+            // En el primer icono si estamos en la ruta inicial cambiaremos de icon
             IconButton(
-              icon: Icon(FontAwesomeIcons.arrowLeft),
-              onPressed: (){
-
+              icon: Icon(Navigator.canPop(context) ? FontAwesomeIcons.arrowLeft : FontAwesomeIcons.home),
+              onPressed: () {
+                // Si hay pagina de atras, si no hay no saldra, usando un spread
+                if (Navigator.canPop(context))
+                  Navigator.pop(context); 
+                  
               },
             ),
             Spacer(),
             IconButton(
               icon: Icon(FontAwesomeIcons.search),
-              onPressed: (){
-
-              },
+              onPressed: () {},
             ),
-            Stack(
-              children: [
-                IconButton(
-                  icon: Icon(FontAwesomeIcons.shoppingBag),
-                  onPressed: (){},
+            Stack(children: [
+              IconButton(
+                icon: Icon(FontAwesomeIcons.shoppingBag),
+                onPressed: () {},
+              ),
+              Container(
+                width: 20.0,
+                height: 20.0,
+                child: Center(
+                    child: Text(
+                  '1',
+                  style: TextStyle(color: Colors.white),
+                )),
+                decoration: BoxDecoration(
+                  color: Colors.red,
+                  borderRadius: BorderRadius.circular(20.0),
                 ),
-                Container(
-                  width: 20.0,
-                  height: 20.0,
-                  child: Center(child: Text('1', style: TextStyle(color: Colors.white),)),
-                  decoration: BoxDecoration(
-                    color: Colors.red,
-                    borderRadius: BorderRadius.circular(20.0),
-                  ),
-                )
-              ]
-            ),
+              )
+            ]),
             IconButton(
-              icon: Icon(FontAwesomeIcons.ellipsisV, size: 15.0,),
-              onPressed: (){
-
-              },
+              icon: Icon(
+                FontAwesomeIcons.ellipsisV,
+                size: 15.0,
+              ),
+              onPressed: () {},
             ),
             ClipRRect(
               borderRadius: BorderRadius.circular(15.0),
@@ -63,7 +67,9 @@ class CustomAppBar extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(width: 15.0,)
+            SizedBox(
+              width: 15.0,
+            )
           ],
         ),
       ),

@@ -10,27 +10,27 @@ class ProductPage extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          SafeArea(
-            child: SingleChildScrollView(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  CustomAppBar(),
-                  // Widgets que trabajaremos de la pantalla principal
-                  // _Header(),
-                  // Widget que contiene el CardView
-                  // CardsView()
-                ],
-              ),
-            ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              CustomAppBar(),
+              // Widgets que trabajaremos de la pantalla principal
+              // _Header(),
+              // Widget que contiene el CardView
+              // CardsView()
+            ],
           ),
-          BuyButton(
-            color:Color(0xff08399B),
-            text: 'Pay now',
-            onTap: (){
-              Navigator.pushNamed(context, 'home');
-            },
-            sizeButton: 0.3,
+          Positioned(
+            bottom: 0.0,
+            right: 0.0,
+            child: BuyButton(
+              color:Color(0xff08399B),
+              text: 'Pay now',
+              onTap: (){
+                Navigator.pushNamed(context, 'home');
+              },
+              sizeButton: 0.3,
+            ),
           )
         ],
       )

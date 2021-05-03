@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 
 import 'package:beats/src/models/producto_model.dart';
 import 'package:beats/src/providers/productos_provider.dart';
-
+// TODO: Colocar las imagenes como una galeria tal como un Swiper
 class CardsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
