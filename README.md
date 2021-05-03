@@ -25,6 +25,7 @@ _Esto cargara los paquetes o dependencias necesarias que ejecuta la aplicación_
 ## Construido con 🛠️
 
 _Flutter basado en Dart, contiene librerias como provider,font-awesome-flutter-icons, entre otras librerias a usar en futuro_
+![](https://github.com/Klerith/flutter-beatsApp/blob/master/small.jpg?raw=true)
 
 
 ## Wiki 📖
