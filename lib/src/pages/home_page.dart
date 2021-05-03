@@ -59,29 +59,34 @@ class BuyButton extends StatelessWidget {
   Widget build(BuildContext context) {
     // Obteniendo propiedad del mediaquery
     final size = MediaQuery.of(context).size;
-    return Stack(
-      children: [
-        Positioned(
-          bottom: 0.0,
-          right: 0.0,
-          child: Container(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text('Buy', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 20.0),),
-                SizedBox(width: 5.0,),
-                Icon(FontAwesomeIcons.arrowRight, color: Colors.white,)
-              ],
+    return InkWell(
+      onTap: (){
+        Navigator.pushNamed(context,'product');
+      },
+      child: Stack(
+        children: [
+          Positioned(
+            bottom: 0.0,
+            right: 0.0,
+            child: Container(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text('Buy', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 20.0),),
+                  SizedBox(width: 5.0,),
+                  Icon(FontAwesomeIcons.arrowRight, color: Colors.white,)
+                ],
+              ),
+              height: 75,
+              width: size.width * 0.3,
+              decoration: BoxDecoration(
+                color: Colors.red,
+                borderRadius: BorderRadius.only(topLeft: Radius.circular(50.0))
+              ),
             ),
-            height: 75,
-            width: size.width * 0.3,
-            decoration: BoxDecoration(
-              color: Colors.red,
-              borderRadius: BorderRadius.only(topLeft: Radius.circular(50.0))
-            ),
-          ),
-        )
-      ],
+          )
+        ],
+      ),
     );
   }
 }

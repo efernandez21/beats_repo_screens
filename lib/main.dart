@@ -1,4 +1,5 @@
 import 'package:beats/src/pages/home_page.dart';
+import 'package:beats/src/pages/product_page.dart';
 import 'package:beats/src/providers/productos_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
         // home: HomePage(),
         routes: {
           'home': (BuildContext context) => HomePage(),
+          'product': (BuildContext context) => ProductPage()
         },
       ),
     );

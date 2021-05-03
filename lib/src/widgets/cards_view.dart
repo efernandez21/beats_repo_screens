@@ -39,7 +39,7 @@ class _Card extends StatelessWidget {
   Widget build(BuildContext context) {
     // Este Stack contiene los elementos de la tarjeta que esta dividida en dos partes la descripcion y la parte visual de la tarjeta junto con el Auricular
     return Container(
-      color: Colors.red,
+      // color: Colors.red,
       child: Stack(
         children: [
           // El row junta las dos partes de la tarjeta
@@ -78,7 +78,7 @@ class _PrimeraDescripcion extends StatelessWidget {
   Widget build(BuildContext context) {
     // Usamos el rotatedbox para  rotar el elemento row
     return Padding(
-      padding: EdgeInsets.all(10.0),
+      padding: EdgeInsets.symmetric(vertical: 10.0, ),
       child: RotatedBox(
         quarterTurns: 3,
         child: Row(
