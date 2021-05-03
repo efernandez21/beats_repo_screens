@@ -55,7 +55,7 @@ class _Card extends StatelessWidget {
           ),
           // Imagen del producto en el positioned en el stack
           Positioned(
-            top: 90,
+            top: 80,
             left: 50,
             child: Image(
               image: AssetImage('assets/${prod.url}'),

@@ -35,17 +35,18 @@ class CustomAppBar extends StatelessWidget {
                 icon: Icon(FontAwesomeIcons.shoppingBag),
                 onPressed: () {},
               ),
-              Container(
-                width: 20.0,
-                height: 20.0,
-                child: Center(
-                    child: Text(
-                  '1',
-                  style: TextStyle(color: Colors.white),
-                )),
-                decoration: BoxDecoration(
-                  color: Colors.red,
-                  borderRadius: BorderRadius.circular(20.0),
+              Positioned(
+                bottom: 0,
+                child: Container(
+                  width: 20.0,
+                  height: 20.0,
+                  child: Center(
+                      child: Text('1', style: TextStyle(color: Colors.white),
+                  )),
+                  decoration: BoxDecoration(
+                    color: Colors.red,
+                    borderRadius: BorderRadius.circular(20.0),
+                  ),
                 ),
               )
             ]),

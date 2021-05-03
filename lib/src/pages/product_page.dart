@@ -1,3 +1,4 @@
+import 'package:beats/src/widgets/beats_full.dart';
 import 'package:beats/src/widgets/buy_button.dart';
 import 'package:beats/src/widgets/custom_appbar.dart';
 import 'package:flutter/material.dart';
@@ -14,8 +15,9 @@ class ProductPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               CustomAppBar(),
+              // SizedBox(height: 10,),
               // Widgets que trabajaremos de la pantalla principal
-              // _Header(),
+              BeatsFull()
               // Widget que contiene el CardView
               // CardsView()
             ],
