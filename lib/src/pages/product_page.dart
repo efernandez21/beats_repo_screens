@@ -30,6 +30,7 @@ class ProductPage extends StatelessWidget {
             onTap: (){
               Navigator.pushNamed(context, 'home');
             },
+            sizeButton: 0.3,
           )
         ],
       )

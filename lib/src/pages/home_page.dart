@@ -1,7 +1,8 @@
 import 'package:beats/src/widgets/buy_button.dart';
+import 'package:beats/src/widgets/products_list.dart';
 import 'package:flutter/material.dart';
 
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+// import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:beats/src/widgets/custom_appbar.dart';
 import 'package:beats/src/widgets/cards_view.dart';
@@ -26,6 +27,8 @@ class HomePage extends StatelessWidget {
                   _Header(),
                   // Widget que contiene el CardView
                   CardsView(),
+                  // Widget con la lista de productos
+                  ProductsList()
                 ],
               ),
             ),
@@ -36,6 +39,7 @@ class HomePage extends StatelessWidget {
             onTap: (){
               Navigator.pushNamed(context, 'product');
             },
+            sizeButton: 0.25,
           )
         ],
       )
