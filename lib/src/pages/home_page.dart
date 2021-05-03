@@ -18,28 +18,34 @@ class HomePage extends StatelessWidget {
       body: Stack(
         children: [
           FondoCircular(),
-          SafeArea(
-            child: SingleChildScrollView(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  CustomAppBar(),
-                  _Header(),
-                  // Widget que contiene el CardView
-                  CardsView(),
-                  // Widget con la lista de productos
-                  ProductsList()
-                ],
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              CustomAppBar(),
+              _Header(),
+              // // Widget que contiene el CardView
+              CardsView(),
+              // Widget texto Popular Beats Products
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 25.0),
+                height: 25,
+                child: Text('Popular Beats Products', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),)
               ),
-            ),
+              // SizedBox(height: 5,),
+              Expanded(child: ProductsList()),
+            ],
           ),
-          BuyButton(
-            color:Colors.redAccent, 
-            text: 'Buy', 
-            onTap: (){
-              Navigator.pushNamed(context, 'product');
-            },
-            sizeButton: 0.25,
+          Positioned(
+            bottom: 0.0,
+            right: 0.0,
+            child: BuyButton(
+              color:Colors.redAccent, 
+              text: 'Buy', 
+              onTap: (){
+                Navigator.pushNamed(context, 'product');
+              },
+              sizeButton: 0.25,
+            ),
           )
         ],
       )
@@ -55,7 +61,7 @@ class _Header extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(height: 40,),
+          SizedBox(height: 5,),
           Text('Beats', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30.0),),
           Text('by Dre', style: TextStyle(fontWeight: FontWeight.w100, fontSize: 18.0))
         ],

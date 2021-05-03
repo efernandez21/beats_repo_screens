@@ -13,7 +13,7 @@ class CardsView extends StatelessWidget {
     // El height indica el cargo de este container general, si no se coloca el tomara el ancho dado por la tarjeta
     return Container(
       width: double.infinity,
-      height: 460.0,
+      height: 420.0,
       child: PageView(
         physics: BouncingScrollPhysics(),
         pageSnapping: false,
@@ -39,7 +39,7 @@ class _Card extends StatelessWidget {
   Widget build(BuildContext context) {
     // Este Stack contiene los elementos de la tarjeta que esta dividida en dos partes la descripcion y la parte visual de la tarjeta junto con el Auricular
     return Container(
-      color: Colors.red,
+      // color: Colors.red,
       child: Stack(
         children: [
           // El row junta las dos partes de la tarjeta
