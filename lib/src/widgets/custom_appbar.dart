@@ -54,7 +54,10 @@ class CustomAppBar extends StatelessWidget {
             child: Container(
               width: 50.0,
               height: 50.0,
-              color: Colors.blue,
+              child: Image(
+                image: AssetImage('assets/perfil-superman.jpg'),
+                fit: BoxFit.cover,
+              ),
             ),
           ),
           SizedBox(width: 15.0,)

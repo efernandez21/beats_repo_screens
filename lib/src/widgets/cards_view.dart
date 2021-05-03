@@ -198,7 +198,7 @@ class _TarjetaDescripcion extends StatelessWidget {
                     child: Center(
                       child: Text(
                         'Add to bag',
-                        style: TextStyle(color: Colors.white),
+                        style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                       ),
                     ),
                     width: 120.0,

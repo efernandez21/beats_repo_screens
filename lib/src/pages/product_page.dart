@@ -1,3 +1,4 @@
+import 'package:beats/src/widgets/buy_button.dart';
 import 'package:beats/src/widgets/custom_appbar.dart';
 import 'package:flutter/material.dart';
 
@@ -23,6 +24,13 @@ class ProductPage extends StatelessWidget {
               ),
             ),
           ),
+          BuyButton(
+            color:Color(0xff08399B),
+            text: 'Pay now',
+            onTap: (){
+              Navigator.pushNamed(context, 'home');
+            },
+          )
         ],
       )
     );

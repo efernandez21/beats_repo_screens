@@ -1,3 +1,4 @@
+import 'package:beats/src/widgets/buy_button.dart';
 import 'package:flutter/material.dart';
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -24,12 +25,18 @@ class HomePage extends StatelessWidget {
                   CustomAppBar(),
                   _Header(),
                   // Widget que contiene el CardView
-                  CardsView()
+                  CardsView(),
                 ],
               ),
             ),
           ),
-          BuyButton()
+          BuyButton(
+            color:Colors.redAccent, 
+            text: 'Buy', 
+            onTap: (){
+              Navigator.pushNamed(context, 'product');
+            },
+          )
         ],
       )
     );
@@ -53,40 +60,3 @@ class _Header extends StatelessWidget {
   }
 }
 
-// Widget Botton para comprar
-class BuyButton extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    // Obteniendo propiedad del mediaquery
-    final size = MediaQuery.of(context).size;
-    return InkWell(
-      onTap: (){
-        Navigator.pushNamed(context,'product');
-      },
-      child: Stack(
-        children: [
-          Positioned(
-            bottom: 0.0,
-            right: 0.0,
-            child: Container(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text('Buy', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 20.0),),
-                  SizedBox(width: 5.0,),
-                  Icon(FontAwesomeIcons.arrowRight, color: Colors.white,)
-                ],
-              ),
-              height: 75,
-              width: size.width * 0.3,
-              decoration: BoxDecoration(
-                color: Colors.red,
-                borderRadius: BorderRadius.only(topLeft: Radius.circular(50.0))
-              ),
-            ),
-          )
-        ],
-      ),
-    );
-  }
-}
